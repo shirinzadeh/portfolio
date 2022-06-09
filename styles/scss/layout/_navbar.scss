@@ -1,0 +1,107 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.875rem 0;
+
+    @include medium {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    @include small {
+        position: static;
+        background-color: $black;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+    
+    &-logo {
+        color: $white;
+        font-weight: 600;
+        font-size: 1.5rem;
+        letter-spacing: 0.035em;
+        line-height: 1.5rem;
+        position: relative;
+        @include transition(.15s);
+
+        &:hover {
+            color: $white;
+        }
+
+        &::after {
+            content: '';;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background: url('../../images/hero/line-vector-white.svg') ;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 0%;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.15s);
+        }
+
+        &:hover::after {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            visibility: visible;
+        }
+    }
+
+    &-toggler {
+        $toggler-w: 60px;
+        @include flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        position: relative;
+        padding: 0;
+        width: $toggler-w;
+        height: 20px;
+
+        @include small {
+            $toggler-w: 40px;
+            width: $toggler-w;
+            height: 16px;
+        }
+
+        //Two line hamburger menu 
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $white;
+            display: inline-block;
+            @include transition(transform .2s ease-out)
+        }
+
+        &::after {
+            transform: translateY(12px);
+        }
+
+        &.active::before,
+        &.active::after {
+            top: 50%;
+        }
+
+        // "Close icon" onclick menu
+        &.active::before {
+            transform: translateY(0) rotate(45deg);
+            transform-origin: center;
+        }
+
+        &.active::after {
+            transform: translateY(0) rotate(-45deg);
+            transform-origin: center;
+        }
+    }
+}

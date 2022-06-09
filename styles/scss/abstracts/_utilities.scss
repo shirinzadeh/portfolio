@@ -1,0 +1,160 @@
+.section-pdng {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+
+    @include medium {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    // @include small {
+    //     padding-top: 5rem;
+    //     padding-bottom: 2.5rem;
+    // }
+}
+
+.heading {
+    margin-bottom: 3.5rem;
+    @include small {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.stretch-col {
+    @include flex;
+    align-items: stretch;
+}
+
+// Navbar
+
+.navbar-light {
+    @include medium {
+        background-color: $white;
+
+        &.navbar {
+            background-color: $white;
+        }
+    }
+
+    .navbar-logo {
+        color: $black;
+        &:hover {
+            color: $black;
+        }
+        &::after {
+            background-image: url('../../images/hero/line-vector-black.svg');
+        }
+    }
+
+    .navbar-toggler {
+        &::after,
+        &::before {
+            background-color: $black;
+        }
+    }
+}
+
+// Typography
+
+.h1 {
+    font-weight: 600;
+    font-size: 4rem;
+
+    @include medium {
+        font-size: 3.25rem;
+    }
+    @include small {
+        font-size: 3rem;
+    }
+}
+
+.h2 {
+    font-size: 3.25rem;
+    font-weight: 600;
+
+    @include medium {
+        font-size: 3rem;
+    }
+    @include small {
+        font-size: 2rem;
+    }
+}
+
+.h3 {
+    font-size: 2.5rem;
+}
+
+.h4 {
+    font-size: 2rem;
+    @include small {
+        font-size: 1.75rem;
+    }
+}
+
+.h5 {
+    font-size: 1.75rem;
+}
+
+.h6 {
+    font-size: 1.25rem;
+}
+
+//Buttons
+.btn-anim {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    @include transition(.7s ease-in);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 0%;
+        background-color: $white;
+        @include transform-mult(translate(-50%, -50%), rotate(-45deg));
+        @include transition(.7s ease-in);
+        z-index: -1;
+    }
+
+    &:hover {
+        color: $black !important;
+    }
+
+    &:hover::before {
+        height: 400%;
+    }
+}
+
+.btn--outline.btn-anim {
+    &::before {
+        background-color: $primary !important ;
+        @include transform-mult(translate(-50%, -50%), rotate(45deg));
+    }
+
+    &:hover {
+        color: $white !important;
+    }
+}
+
+/* Animations */ 
+.upDownAnim {
+    animation: upDownAnim 2s infinite;
+}
+
+@keyframes upDownAnim {
+   0% {
+    transform: translateY(0);
+   } 
+   25% {
+    transform: translateY(-10px);
+   } 
+   50% {
+    transform: translateY(10px);
+   }
+   100% {
+    transform: translateY(0px);
+   }
+   
+}

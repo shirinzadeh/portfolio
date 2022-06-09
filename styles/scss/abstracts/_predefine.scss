@@ -1,0 +1,18 @@
+body {
+    line-height: 130%;
+    letter-spacing: 0.7%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+i {
+    font-size: 1.5rem;
+}
+
+.container {
+    --bs-gutter-x: 1rem;
+
+    @include extra-xlarge {
+        max-width: 1440px;
+        padding: 0 $container-pdng;
+    }
+}

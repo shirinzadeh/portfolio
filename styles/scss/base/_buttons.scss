@@ -1,0 +1,39 @@
+.btn--main,
+.btn--outline {
+    padding: .8rem 1.8rem;
+    border-radius: 1.5rem;
+    letter-spacing: 0.028em;
+    font-weight: 500;
+    font-size: 1rem;
+    display: inline-block;
+    outline: 2px solid $primary;
+    @include medium {
+        padding: .5rem 1.5rem;
+    }
+}
+
+.btn--outline {
+    background-color: $white;
+    color: $black ;
+    border: 0;
+}
+
+.btn--main {
+    background-color: $primary;
+    color: $white;
+}
+
+// Card
+.card__button {
+    .card-btn {
+        // text-align: center;
+        text-transform: uppercase;
+    }
+    
+    &--multiple {
+        @include flex;
+        gap: 1rem;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+    }
+}

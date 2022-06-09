@@ -1,0 +1,82 @@
+.hero {
+    height: 100%;
+
+    /* Uncomment if hero flex direction will be column in medium size*/
+
+    // @include medium {
+    //     height: calc(100% - 72px); //Subtraction Navbar height
+    // }
+
+    @include small {
+        height: calc(100% - 64px); //Subtraction Navbar height
+    }
+
+    &__wrapper {
+        @include flex;
+        align-items: center;
+        height: 100%;
+
+        @include small {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        color: $white;
+
+        @include xlarge {
+            font-size: 3rem;
+        }
+        @include medium {
+            font-size: 2.5rem;
+        }
+        @include small {
+            font-size: 2rem;
+        }
+    }
+
+    &__info {
+        flex-basis: 54.1%;
+        @include flex;
+        align-items: center;
+        background-color: $black;
+        height: 100%;
+        width: 100%;
+
+        @include extra-xlarge {
+            padding-left: $container-pdng;
+            padding-right: 3rem;
+        }
+
+        @include xlarge {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            text-align: center;
+            justify-content: center;
+        }
+        @include medium {
+            flex-basis: 50%;
+        }
+    }
+
+    &__picture {
+        flex: 1;
+        background-color: $primary;
+        height: 100%;
+        width: 100%;
+
+        > div {
+            height: 100%;
+            @include flex-center;
+        }
+
+        img {
+            border-radius: 70% 35% 35% 30%;
+            
+            @include large {
+                max-width: 250px;
+            }
+        }
+    }
+
+}

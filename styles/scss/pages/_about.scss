@@ -1,0 +1,149 @@
+.page-about {
+    .navbar-logo {
+        color: $black;
+    }
+    .navbar-toggler::before, 
+    .navbar-toggler::after {
+        background-color: $black;
+    }
+    .header {
+        background: linear-gradient(180deg, #F8F2FF 0%, rgba(250, 250, 250, 0) 100%);
+        backdrop-filter: blur(250px);   
+        height: 100%;
+    }
+}
+
+.about {
+    &__left {
+        padding: 9.375rem 0;
+        @include medium {
+            padding-bottom: 5rem;
+        }
+        @include small {
+            padding-bottom: 3.75rem;
+        }
+        
+        h1 {
+            line-height: 4.375rem;
+            margin-bottom: 2.375rem;
+        }
+    }
+
+    &__skills {
+        margin-top: 2rem;
+        font-size: 0.875rem ;
+        
+        h6 { display: inline-block; font-weight: 600; }
+
+
+    }
+
+    &__link {
+        @include flex;
+        align-items: center;
+        margin-top: 1.875rem;
+    }
+
+    &__right {
+        @include flex;
+        justify-content: center;
+
+        @include medium {
+            padding: 5.5rem 0;
+        }
+    }
+
+    &__box {
+        @include box-shadow(0px 40px 30px rgba(25, 25, 46, 0.04));
+        border-radius: 0.875rem;
+        @include inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        position: relative;
+        background-color: $white;
+    }
+
+    &__image {
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 1.625rem;
+
+        img {
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+            @include filter(drop-shadow(0px 10px 20px rgba(0, 59, 108, 0.13)));
+        }
+
+        .title {
+            font-size: 0.75rem;
+            padding: 0.3125rem 0.75rem;
+            background: linear-gradient(135deg, #FF26B2 0%, #851BD9 64.06%, #3F0FFF 100%);
+            @include box-shadow(0px 5px 20px rgba(250, 118, 96, 0.2));
+            border-radius: 65.7658px;
+            color: $white;
+            font-weight: 700;
+            position: absolute;
+            bottom: -5%;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+    }
+
+    .absolute-boxes {
+        .box-with-text {
+            padding: 1rem 1.5rem;
+            color: #5D87A8;
+        }
+
+        > div {
+            padding: 8px;
+            @include box-shadow(0px 40px 30px rgba(25, 25, 46, 0.04));
+            border-radius: 25px
+        }
+        > div:first-child {
+            background-color: #FFEFE5;
+            position: absolute;
+            top: .5rem;
+            left: -15%;
+        }
+        > div:nth-child(2) {
+            background-color: #E5F3FF;
+            position: absolute;
+            top: 15%;
+            right: -15%;
+        }
+        > div:nth-child(3) {
+            background-color: #FFF2CC;
+            position: absolute;
+            bottom: -15%;
+            left: 15%;
+        }
+        > div:nth-child(4) {
+            position: absolute;
+            top: 40%;
+            left: -70%;
+            background-color: $white;
+        }
+        > div:nth-child(5) {
+            position: absolute;
+            bottom: 20%;
+            right: -50%;
+            background-color: $white;
+        }
+        > div:nth-child(6) {
+            position: absolute;
+            top: -30%;
+            right: -30%;
+            background-color: $white;
+        }
+        > div:nth-child(7) {
+            position: absolute;
+            bottom: -30%;
+            right: -20%;
+            background-color: $white;
+        }
+    }
+}

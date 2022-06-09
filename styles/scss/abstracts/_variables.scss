@@ -1,0 +1,19 @@
+//Colors
+$black: #202020;
+$black200: #252525;
+$black400: #2a2a2a;
+$black-muted: #333;
+$white: #fff;
+$white700: rgba(255,255,255, .7);
+$primary: #9665FF;
+$red-dark: #73000F;
+$bg-color: #F8EFF2;
+
+$container-pdng: 4.25rem;
+
+//Mixins
+@mixin flex-center {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+}
