@@ -48,11 +48,16 @@
         &:hover {
             background-position: 0 100%;
         }
+
+        &.active{
+            -webkit-text-fill-color: $primary;
+        }
     }
 }
+
 html.js-sidemenu-open {overflow: hidden;}
+
 .js-sidemenu-open {
-    &html, 
     body {
         margin: 0; 
         height: 100%; 
