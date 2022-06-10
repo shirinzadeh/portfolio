@@ -21,6 +21,7 @@
         }
         @include small {
             padding-bottom: 3.75rem;
+            padding-top: 3.75rem;
         }
         
         h1 {
@@ -126,18 +127,27 @@
             top: 40%;
             left: -70%;
             background-color: $white;
+            @include small {
+                display: none;
+            }
         }
         > div:nth-child(5) {
             position: absolute;
             bottom: 20%;
             right: -50%;
             background-color: $white;
+            @include small {
+                display: none;
+            }
         }
         > div:nth-child(6) {
             position: absolute;
             top: -30%;
             right: -30%;
             background-color: $white;
+            @include small {
+                display: none;
+            }
         }
         > div:nth-child(7) {
             position: absolute;

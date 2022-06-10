@@ -32,7 +32,8 @@
                 }
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
                 position: relative;
 
                 img {                
