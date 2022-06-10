@@ -27,6 +27,10 @@
         h1 {
             line-height: 4.375rem;
             margin-bottom: 2.375rem;
+            @include small {
+                margin-bottom: 2rem;
+                line-height: 100%;
+            }
         }
     }
 

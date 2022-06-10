@@ -6,17 +6,17 @@
         li:not(:last-child) {
             margin-bottom: .5rem;
         } 
+    }
 
-        a {
-            @include inline-flex;
-            align-items: center;
-            color: $white700;
-            @include transition;
+    a {
+        @include inline-flex;
+        align-items: center;
+        color: $white700;
+        @include transition;
 
-            &:hover,
-            &:focus {
-                color: $white;
-            }
+        &:hover,
+        &:focus {
+            color: $white;
         }
     }
 
@@ -45,12 +45,8 @@
                 }                
             }
             
-            a {
-
-
-                span {
-                    margin-left: .5rem;
-                }
+            a span {
+                margin-left: .5rem;
             }
         }
     }
@@ -71,6 +67,35 @@
         text-align: end;
         @include small {
             text-align: center;
+        }
+    }
+
+    &--minified {
+        .footer__content {
+            @include flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2.5rem 0;
+
+            @include medium {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+
+        .footer__logo {
+            font-size: 1.25rem;
+            color: $white;
+        }
+
+        .footer__navbar{
+            @include flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .footer__bottom {
+            @include medium { text-align: center; }
         }
     }
 }
