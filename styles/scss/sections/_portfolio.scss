@@ -25,12 +25,9 @@
 
             img {
                 height: 250px;
-                object-fit: contain;
+                object-fit: fill;
                 border-radius: $rounded;
                 @include transition;
-                @include xsmall {
-                    height: 340px;
-                }
             }
 
             &:hover,
